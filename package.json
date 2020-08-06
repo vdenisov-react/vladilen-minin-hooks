@@ -10,6 +10,7 @@
         "prettier-fix": "prettier --write **/*.{html,css,js,jsx}"
     },
     "dependencies": {
+        "materialize-css": "^1.0.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-scripts": "3.4.1"
