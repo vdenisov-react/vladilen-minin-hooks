@@ -2,12 +2,20 @@ import React, { useContext } from 'react';
 import { Context } from '../shared/context';
 
 export default function TodoItem({ title, id, completed }) {
-    const { toggleTodo, removeTodo } = useContext(Context);
+    const { dispatch } = useContext(Context);
 
     const classes = ['todo'];
 
     if (completed) {
         classes.push('completed');
+    }
+
+    function toggleTodo(id) {
+        dispatch({ type: 'TOGGLE_TODO', payload: id });
+    }
+
+    function removeTodo(id) {
+        dispatch({ type: 'REMOVE_TODO', payload: id });
     }
 
     return (
